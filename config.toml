@@ -82,7 +82,7 @@ disqusShortname = ""
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
     title = "Hi, my name is Madhur"
-    #subtitle = "A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP\nAND RELEASED UNDER THE CREATIVE COMMONS."
+    subtitle = "Masters in Financial Analysis student at London Business School"
     buttonText = "Get Started"
 
 
@@ -92,38 +92,38 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Aliquam"
-      subtitle = "Ipsum Dolor Sit Amet"
+      title = "About Me"
+      #subtitle = "About Me"
       image = "pic01.jpg"
-      url = "blogs/aliquam"
+      url = "blogs/about-me"
 
     [[params.tiles.showcase]]
-      title = "Tempus"
-      subtitle = "Feugiat Amet Tempus"
+      title = "coming soon..."
+      #subtitle = "Feugiat Amet Tempus"
       image = "pic02.jpg"
       url = "blogs/tempus"
 
     [[params.tiles.showcase]]
-      title = "Magna"
-      subtitle = "Lorem Etiam Nullam"
+      title = "on the way..."
+      #subtitle = "Lorem Etiam Nullam"
       image = "pic03.jpg"
       url = "blogs/magna"
 
     [[params.tiles.showcase]]
-      title = "Ipsum"
-      subtitle = "Nisl Sed Aliquam"
+      title = "under production..."
+      #subtitle = "Nisl Sed Aliquam"
       image = "pic04.jpg"
       url = "blogs/ipsum"
 
     [[params.tiles.showcase]]
-      title = "Consequat"
-      subtitle = "Ipsum Dolor Sit Amet"
+      title = "wait for it..."
+      #subtitle = "Ipsum Dolor Sit Amet"
       image = "pic05.jpg"
       url = "blogs/ipsum"
 
     [[params.tiles.showcase]]
-      title = "Etiam"
-      subtitle = "Feugiat Amet Tempus"
+      title = "In making..."
+      #subtitle = "Feugiat Amet Tempus"
       image = "pic06.jpg"
       url = "blogs/ipsum"
     # You can make more showcases by copy and pasting the code above
@@ -172,33 +172,33 @@ disqusShortname = ""
     # by copying the corresponding map with frontmatter code.
     [[params.contact.email]]
     title = "Email"
-    email = "example@domain.com"
+    email = "magarwal.mfa2021@london.edu"
 
     [[params.contact.phone]]
     title = "Phone"
-    phone = "(000) 000-0000 x1234"
+    phone = "(+44) 745-923 6992"
 
     [[params.contact.address]]
     title = "Address"
-    street = "Street"
-    city = "City, ST 00000"
-    country = "Country"
+    street = "London Business School, Regent's Park"
+    city = "London, NW1 4SA"
+    country = "United Kingdom"
 
   # Footer section
   [params.footer]
     enable = true
-    copyright = "Company Name"
+    copyright = "Madhur Agarwal"
 
     # Uses font awesome icons
     [[params.footer.social]]
-      icon = "fa-twitter"
-      url= "https://www.twitter.com"
-      label = "Twitter"
+      #icon = "fa-twitter"
+      #url= "https://www.twitter.com"
+      #label = "Twitter"
 
     [[params.footer.social]]
-      icon = "fa-facebook"
-      url= "https://www.facebook.com"
-      label = "Facebook"
+      #icon = "fa-facebook"
+      #url= "https://www.facebook.com"
+      #label = "Facebook"
 
     [[params.footer.social]]
       icon = "fa-instagram"
@@ -207,15 +207,15 @@ disqusShortname = ""
     
     [[params.footer.social]]
       icon = "fa-github"
-      url= "https://www.github.com"
+      url= "https://github.com/agarwalmadhur27"
       label = "GitHub"
 
     [[params.footer.social]]
       icon = "fa-linkedin"
-      url= "https://www.linkedin.com"
+      url= "https://www.linkedin.com/in/madhur-agarwal-lbs/"
       label = "LinkedIn"
 
     [[params.footer.quicklinks]]
-      text = "Design: "
-      url= "https://www.html5up.net"
-      alt = "HTML5 UP"
+     # text = "Design: "
+      #url= "https://www.html5up.net"
+      #alt = "HTML5 UP"
