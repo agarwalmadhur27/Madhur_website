@@ -138,8 +138,8 @@ disqusShortname = ""
   # Section Type Two
   [params.two]
     enable = true
-    title = "yea yea..."
-    #subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
+    title = "Massa libero"
+    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
     Mauris aliquet magna magna sed nunc rhoncus pharetra. 
     Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
     Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
@@ -175,8 +175,8 @@ disqusShortname = ""
     email = "magarwal.mfa2021@london.edu"
 
     [[params.contact.phone]]
-    title = "Call Me"
-    phone = "(+44) 745-923 6882"
+    title = "Phone"
+    phone = "(+44) 745-923 6992"
 
     [[params.contact.address]]
     title = "Address"
