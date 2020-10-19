@@ -49,7 +49,7 @@ library(tidyquant)
 
 # GDP components over time and among countries
 
-To look at the differences in GDP accross countries, we have focussed on Germany, India, and USA. In order to gain a better understanding of their components and trends, we have sorted, cleaned, and filtered the data before plotting the relevant data points in the charts that follow:
+To look at the differences in GDP across countries, we have focussed on Germany, India, and USA. In order to gain a better understanding of their components and trends, we have sorted, cleaned, and filtered the data before plotting the relevant data points in the charts that follow:
 
 
 ```{r read_GDP_data}
