@@ -35,12 +35,22 @@
     </item>
     
     <item>
-      <title>Ipsum</title>
-      <link>/blogs/ipsum/</link>
+      <title>About Me</title>
+      <link>/blogs/about-me/</link>
       <pubDate>Tue, 31 Oct 2017 21:28:43 -0500</pubDate>
       
-      <guid>/blogs/ipsum/</guid>
-      <description>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</description>
+      <guid>/blogs/about-me/</guid>
+      <description>Madhur AgarwalWhen I joined my undergraduate program, I weighed 274 pounds. I got rejected from the university Cricket team because I was too overweight. My target was to play for the team. The next day I started my weight loss journey. On day one, I could barely run 100 meters. By the third day, I had pain in every single body part. But I did not give up. By the fourth month I was running 10 Kms a day.</description>
+    </item>
+    
+    <item>
+      <title>With him I have a story</title>
+      <link>/blogs/with-him/</link>
+      <pubDate>Tue, 31 Oct 2017 21:28:43 -0500</pubDate>
+      
+      <guid>/blogs/with-him/</guid>
+      <description>Let me take you 5 years back , January 2015. As the sun came down and the clock hit 5 , one could easily feel the chill in the air . Every evening I knew the next one, one and a half hour are going to be fun and relieve me of the daylong boredom from the monotonous college lectures.
+There was this kid named Praveen, there was something different about him .</description>
     </item>
     
   </channel>

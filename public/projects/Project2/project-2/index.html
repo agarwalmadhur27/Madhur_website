@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="When I joined my undergraduate program, I weighed 274 pounds. I got rejected from the university Cricket team because I was too overweight. My target was to play for the team. The next day I started my weight loss journey. On day one, I could barely run 100 meters. By the third day, I had pain in every single body part. But I did not give up. By the fourth month I was running 10 Kms a day. With a lot of hard work, self-determination and passion to achieve the goal, I lost 100 pounds of weight in 8 months and got selected in the Cricket team next year. More importantly I have carried these qualities thereafter when I worked on my startup and while working at JP Morgan. At JP Morgan, I covered banking and credit, conducted business and financial analysis, financial modeling and due diligence. Taking notes during client and internal meetings, working late nights and early mornings on deals, my experience instilled qualities of high attention to detail, resilience, client-customer focus and teamwork. The opportunity to mentor new joiners further developed my leadership mindset. During the third year of my Engineering studies, I led a team of 6 for my startup “Kursy”. I was responsible for business planning, relationship building, investor pitching and keeping everyone in the team on board. This entrepreneurial experience made me a self-starter, an outgoing and amiable person. As a student at London Business School, studying for Masters in Financial Analysis, I look forward to picking new skills, meeting new people, and exploring new opportunities.">
+	<meta name="author" content="Madhur">
+	<meta name="generator" content="Hugo 0.76.3" />
+	<title>Project2 &middot; Portfolio website for Madhur Agarwal</title>
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="/css/main.css"/>
+	
+	
+
+	
+
+	<!-- Custom Fonts -->
+	<link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico">
+	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="js/ie/html5shiv.js"></script>
+	<script src="js/ie/html5shiv.jsrespond.min.js"></script>
+	<![endif]-->
+</head>
+
+    <body>
+
+    <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Header -->
+    <header id="header" class="alt">
+        <a href="/" class="logo"><strong>Madhur</strong> <span>Walk the road not taken by</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+<!-- Menu -->
+    <nav id="menu">
+        <ul class="links">
+            
+                <li><a href="/">Home</a></li>
+            
+                <li><a href="/blogs/about-me">About Me</a></li>
+            
+
+        </ul>
+        <ul class="actions vertical">
+            
+            
+        </ul>
+    </nav>
+
+        <!-- Main -->
+            <div id="main" class="alt">
+
+                
+                    <section id="one">
+                        <div class="inner">
+                            <header class="major">
+                                <h1>Project2</h1>
+                            </header>
+                            
+                                <span class="image main"><img src="/img/projects/pic01.jpg" alt="" /></span>
+                            
+                            
+
+
+<div id="imdb-ratings-differences-between-directors" class="section level1">
+<h1>IMDB ratings: Differences between directors</h1>
+<p>Examining the IMDB rating and focusing on the mean ratings for Steven Spielberg and Tim Burton, we initially reproduced the given plot before doing further calculations to determine the validity of the comparison.</p>
+<p>Reproducing the graph and running hypothesis tests on the differences between ratings of Steven Spielberg and Tim Burton:</p>
+<p>Our null and alternate hypotheses are:</p>
+<p>H0: The difference in the mean IMDB ratings for Steven Spielberg and Tim Burton is equal to zero
+H1: The difference in the mean IMDB ratings for Steven Spielberg and Tim Burton is not equal to zero</p>
+<p>Initial data analysis reveals the following:</p>
+<pre class="r"><code>movies &lt;- read_csv(here::here(&quot;data&quot;, &quot;movies.csv&quot;))
+#glimpse(movies) - did not want to run this in the knit
+
+#round values up to 3 decimals
+options(digits=4)
+
+#Cleaning the data and removing the unnecessary columns 
+
+movies_clean &lt;- movies %&gt;% 
+  filter((director==&quot;Steven Spielberg&quot;)|(director==&quot;Tim Burton&quot;)) %&gt;% 
+  subset(select=c(&quot;director&quot;,&quot;rating&quot;))
+
+#Calculating variables required for Confidence Intervals
+
+mean_ratings &lt;- movies_clean %&gt;% 
+  group_by(director) %&gt;% 
+  summarise(mean_ratings=mean(rating),
+            count_director= count(director),
+            stdev_ratings=sd(rating)) 
+
+#Computing standard error and confidence intervals
+
+ci_director &lt;- mean_ratings %&gt;% 
+  mutate(se_director=stdev_ratings/sqrt(count_director),
+         lower_ci=mean_ratings-1.96*se_director,
+         upper_ci=mean_ratings+1.96*se_director,
+         
+#reorder the directors to appear Spielberg on top in the chart
+         director=fct_reorder(director,desc(stdev_ratings)))
+ci_director</code></pre>
+<pre><code>## # A tibble: 2 x 7
+##   director mean_ratings count_director stdev_ratings se_director lower_ci
+##   &lt;fct&gt;           &lt;dbl&gt;          &lt;int&gt;         &lt;dbl&gt;       &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Steven ~         7.57             23         0.695       0.145     7.29
+## 2 Tim Bur~         6.93             16         0.749       0.187     6.56
+## # ... with 1 more variable: upper_ci &lt;dbl&gt;</code></pre>
+<pre class="r"><code>#defining colors for error bars
+ci_colors &lt;- c(&quot;#09bec3&quot;, &quot;#f7746b&quot;)
+  
+#Visualising the data
+ci_chart &lt;- ggplot()+
+                    
+  geom_errorbar(ci_director,mapping=aes(x=director, 
+                                        ymin=lower_ci, 
+                                        ymax=upper_ci),
+                                        width=0.05,
+                                        size=2,
+                                        color=ci_colors)+
+  geom_point(ci_director, mapping=aes(x=director,
+                                        y=mean_ratings),
+                                        size=4,
+                                        color=ci_colors)+
+  #geom_text(aes(label=???))+
+  coord_flip()+
+  geom_rect()+
+  theme_bw()+
+  labs(title = &quot;Do Spielberg and Burton have the same mean IMDB ratings?&quot;,subtitle = &quot;95% Confidence intervals overlap&quot;,x=&quot;&quot;,y=&quot;Mean IMDB Rating&quot;)+
+  geom_rect(aes(NULL,NULL,xmin=0,xmax=2.75),
+            ymin=7.290,ymax=7.298, colour=&quot;white&quot;, size=0.5, alpha=0.2)
+ci_chart</code></pre>
+<p><img src="/projects/Project2/Project-2_files/figure-html/load-movies-data-1.png" width="648" style="display: block; margin: auto;" /></p>
+<p>Examining the graph, we cannot draw any final conclusion, as the overlap in the confidence intervals is minor - this will require some further investigation</p>
+<pre class="r"><code>#Calculating the difference in means
+diff_means &lt;- movies_clean %&gt;% 
+  specify(rating~director) %&gt;% 
+  calculate(&quot;diff in means&quot;,
+            oder=c(&quot;Tim Burton&quot;, &quot;Steven Spielberg&quot;))
+
+#Simulating null distribution
+spielberg_burton_null &lt;- movies_clean %&gt;% 
+  specify(rating~director) %&gt;% 
+  hypothesize(null = &quot;independence&quot;) %&gt;% 
+  generate(reps = 5000) %&gt;% 
+  calculate(&quot;diff in means&quot;,
+            oder=c(&quot;Tim Burton&quot;, &quot;Steven Spielberg&quot;))
+
+#Visualising the simulated distribution 
+spielberg_burton_null %&gt;% 
+  visualize(obs_stat = diff_means) + 
+  labs(x = &quot;Difference in mean rating\n(Spielberg - Burton)&quot;,
+       y = &quot;Count&quot;,
+       subtitle = &quot;Red line shows observed difference in mean&quot;) +
+  theme_minimal() +
+  theme(panel.grid.minor = element_blank())</code></pre>
+<p><img src="/projects/Project2/Project-2_files/figure-html/unnamed-chunk-1-1.png" width="648" style="display: block; margin: auto;" /></p>
+<p>The red line is pretty far in the right tail of the distribution and seems atypical. We can calculate the probability of seeing a difference as big as 0.64 by using the get_pvalue function</p>
+<pre class="r"><code>#Calculating the p value
+spielberg_burton_null %&gt;% 
+ get_pvalue(obs_stat = diff_means, direction = &quot;both&quot;)</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##   p_value
+##     &lt;dbl&gt;
+## 1  0.0092</code></pre>
+<p>The p value of 0.0104 which indicates that there is a probability of 1.04% to observe a difference in means of the ratings as large as 0.64.
+Therefore, we can conclude that there is a statistically significant difference between the IMDB ratings of the two directors, with higher ratings for Steven Spielberg than Tim Burton. We can now reject the Null hypothesis.</p>
+</div>
+
+                        </div>
+                    </section>
+            <!-- Disqus Inject -->
+                
+            </div>
+            
+        <!-- Footer -->
+            
+                <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                
+                    <li><a href="https://github.com/agarwalmadhur27" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                
+                    <li><a href="https://www.linkedin.com/in/madhur-agarwal-lbs/" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Madhur Agarwal</li>
+                
+            </ul>
+        </div>
+    </footer>
+
+            
+        </div>
+
+    <!-- Scripts -->
+        <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+
+    
+
+    <!-- Main JS -->
+    <script src="/js/main.js"></script>
+
+    
+
+    
+
+    </body>
+</html>

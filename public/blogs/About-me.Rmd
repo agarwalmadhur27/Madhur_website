@@ -1,0 +1,27 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T21:28:43-05:00"
+description: ""
+draft: false
+#image: about-me.jpg
+keywords: ""
+slug: About-me
+title: About Me
+
+---
+
+![](../pic01.jpg){width=25% height=25%}
+
+# Madhur Agarwal
+
+When I joined my undergraduate program, I weighed 274 pounds. I got rejected from the university Cricket team because I was too overweight. My target was to play for the team. The next day I started my weight loss journey. On day one, I could barely run 100 meters. By the third day, I had pain in every single body part. But I did not give up. By the fourth month I was running 10 Kms a day. With a lot of hard work, self-determination and passion to achieve the goal, I lost 100 pounds of weight in 8 months and got selected in the Cricket team next year. More importantly I have carried these qualities thereafter when I worked on my startup and while working at JP Morgan.
+
+At JP Morgan, I covered banking and credit, conducted business and financial analysis, financial modeling and due diligence. Taking notes during client and internal meetings, working late nights and early mornings on deals, my experience instilled qualities of high attention to detail, resilience, client-customer focus and teamwork. The opportunity to mentor new joiners further developed my leadership mindset.
+
+During the third year of my Engineering studies, I led a team of 6 for my startup “Kursy”. I was responsible for business planning, relationship building, investor pitching and keeping everyone in the team on board. This entrepreneurial experience made me a self-starter, an outgoing and amiable person.
+
+As a student at London Business School, studying for Masters in Financial Analysis, I look forward to picking new skills, meeting new people, and exploring new opportunities.
+
+![](../Resume.pdf){width=100% height=100%}

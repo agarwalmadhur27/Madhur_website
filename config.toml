@@ -47,17 +47,17 @@ disqusShortname = ""
       name = "Home"
       url = "#"
 
-    [[params.navigation.links]]
-      name = "Blogs"
-      url = "blogs"
+    #[[params.navigation.links]]
+      #name = "Blogs"
+      #url = "blogs"
 
     [[params.navigation.links]]
-      name = "Generic Blog"
-      url = "blogs/ipsum"
+      name = "About Me"
+      url = "blogs/about-me"
 
-    [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
+    #[[params.navigation.links]]
+     # name = "Elements"
+      #url = "elements.html"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -67,14 +67,14 @@ disqusShortname = ""
     #    url = "UrlOfLink"
 
     # Button Style 1
-    [[params.navigation.button1]]
-      name = "Get Started"
-      url = "blogs"
+    #[[params.navigation.button1]]
+     # name = "Get Started"
+      #url = "blogs"
 
     # Button Style 2
-    [[params.navigation.button2]]
-      name = "Log In"
-      url = "#"
+    #[[params.navigation.button2]]
+     # name = "Log In"
+      #url = "#"
 
 
   # Banner section
@@ -98,34 +98,34 @@ disqusShortname = ""
       url = "blogs/about-me"
 
     [[params.tiles.showcase]]
-      title = "coming soon..."
+      title = "GDP components across countries"
       #subtitle = "Feugiat Amet Tempus"
-      image = "pic02.jpg"
-      url = "blogs/tempus"
+      image = "gdp2.png"
+      url = "projects/Project1/Project-1"
 
     [[params.tiles.showcase]]
-      title = "on the way..."
+      title = "Yield Curve Inversion"
       #subtitle = "Lorem Etiam Nullam"
-      image = "pic03.jpg"
-      url = "blogs/magna"
+      image = "yield.png"
+      url = "projects/Project3/Project-3"
 
     [[params.tiles.showcase]]
-      title = "under production..."
+      title = "IMDB Ratings"
       #subtitle = "Nisl Sed Aliquam"
-      image = "pic04.jpg"
-      url = "blogs/ipsum"
+      image = "imdb_1.png"
+      url = "projects/Project2/Project-2"
 
     [[params.tiles.showcase]]
-      title = "wait for it..."
+      title = "With him I have a story..."
       #subtitle = "Ipsum Dolor Sit Amet"
-      image = "pic05.jpg"
-      url = "blogs/ipsum"
+      image = "praveen.jpg"
+      url = "blogs/with-him"
 
-    [[params.tiles.showcase]]
-      title = "In making..."
+    #[[params.tiles.showcase]]
+      #title = "In making..."
       #subtitle = "Feugiat Amet Tempus"
-      image = "pic06.jpg"
-      url = "blogs/ipsum"
+      #image = "pic06.jpg"
+      #url = "blogs/ipsum"
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
@@ -136,16 +136,16 @@ disqusShortname = ""
     # To add more blogs just copy and paste the code.
 
   # Section Type Two
-  [params.two]
-    enable = true
-    title = "Massa libero"
-    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
-    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
-    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
-    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
-    buttonText = "Get Started"
-    url = "blogs"
+  #[params.two]
+    #enable = true
+    #title = "Massa libero"
+    #subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
+    #Mauris aliquet magna magna sed nunc rhoncus pharetra. 
+    #Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
+    #Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
+    #Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+    #buttonText = "Get Started"
+    #url = "blogs"
 
 
   # Contact section
@@ -190,17 +190,17 @@ disqusShortname = ""
     copyright = "Madhur Agarwal"
 
     # Uses font awesome icons
-    [[params.footer.social]]
+    #[[params.footer.social]]
       #icon = "fa-twitter"
       #url= "https://www.twitter.com"
       #label = "Twitter"
 
-    [[params.footer.social]]
+    #[[params.footer.social]]
       #icon = "fa-facebook"
       #url= "https://www.facebook.com"
       #label = "Facebook"
 
-    [[params.footer.social]]
+    #[[params.footer.social]]
       #icon = "fa-instagram"
       #url= "https://www.instagram.com"
       #label = "Instagram"
@@ -215,7 +215,7 @@ disqusShortname = ""
       url= "https://www.linkedin.com/in/madhur-agarwal-lbs/"
       label = "LinkedIn"
 
-    [[params.footer.quicklinks]]
+    #[[params.footer.quicklinks]]
      # text = "Design: "
       #url= "https://www.html5up.net"
       #alt = "HTML5 UP"
