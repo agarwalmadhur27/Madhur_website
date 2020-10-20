@@ -24,4 +24,4 @@ During the third year of my Engineering studies, I led a team of 6 for my startu
 
 As a student at London Business School, studying for Masters in Financial Analysis, I look forward to picking new skills, meeting new people, and exploring new opportunities.
 
-![](../Resume.pdf){width=100% height=1000}
+![](../Resume.jpg){width=60% height=40%}

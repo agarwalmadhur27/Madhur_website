@@ -104,28 +104,30 @@ disqusShortname = ""
       url = "projects/Project1/Project-1"
 
     [[params.tiles.showcase]]
-      title = "Yield Curve Inversion: How real is it?"
-      #subtitle = "Lorem Etiam Nullam"
-      image = "yield.png"
-      url = "projects/Project3/Project-3"
-
-    [[params.tiles.showcase]]
       title = "IMDB Ratings: Do they matter?"
       #subtitle = "Nisl Sed Aliquam"
       image = "imdb_1.png"
       url = "projects/Project2/Project-2"
 
     [[params.tiles.showcase]]
+      title = "Yield Curve Inversion: How real is it?"
+      #subtitle = "Lorem Etiam Nullam"
+      image = "yield.png"
+      url = "projects/Project3/Project-3"
+      
+      [[params.tiles.showcase]]
+      title = "The curious case of Omega Inc"
+      #subtitle = "Feugiat Amet Tempus"
+      image = "omega.jpg"
+      url = "projects/Project4/Project-4"
+      
+      [[params.tiles.showcase]]
       title = "With him I have a story..."
       #subtitle = "Ipsum Dolor Sit Amet"
       image = "praveen.jpg"
       url = "blogs/with-him"
 
-    [[params.tiles.showcase]]
-      title = "The curious case of Omega Inc"
-      #subtitle = "Feugiat Amet Tempus"
-      image = "omega.jpg"
-      url = "projects/Project4/Project-4"
+    
     # You can make more showcases by copy and pasting the code above
 
   [params.blog]
@@ -165,7 +167,7 @@ disqusShortname = ""
     # - send a dummy email yourself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-    # formEmail = "example@domain.com"
+    formEmail = "agarwalmadhur27@gmail.com"
 
     # Contact Section
     # You can add multiple emails, phone numbers, or addresses
